@@ -3,7 +3,7 @@ weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const inputElement = document.querySelector("form input");
   const adddress = inputElement.value;
-  const url = `http://localhost:3000/weather?address=${adddress}`;
+  const url = `/weather?address=${adddress}`;
   fetch(url)
     .then((d) => d.json())
     .then(({ error, currentTemperature, location, weatherDescription }) => {
