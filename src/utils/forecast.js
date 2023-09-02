@@ -11,7 +11,7 @@ const forecast = (lat, long, callback) => {
       callback(undefined, {
         currentTemperature: current.temperature,
         weatherDescription: current["weather_descriptions"][0],
-        location: location.name,
+        location: `${location.name}, ${location.region}, ${location.country}`,
       });
     }
   });

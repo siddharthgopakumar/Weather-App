@@ -11,6 +11,7 @@ weatherForm.addEventListener("submit", (e) => {
       const messageTwo = document.querySelector("#message-two");
       if (error) {
         messageOne.textContent = error;
+        messageTwo.textContent = "";
       } else {
         const tempDegreeCel = Math.round((currentTemperature - 32) * (5 / 9));
         messageOne.textContent = location;
