@@ -9,7 +9,7 @@ const forecast = (lat, long, callback) => {
       callback("Unable to find the weather for given location", undefined);
     } else {
       callback(undefined, {
-        currentWeather: `${current["weather_descriptions"][0]} is expected to persist till evening. It is currently ${current.temperature} degrees out, but feels like ${current.feelslike} degrees out. The humidity is ${current.humidity}%.`,
+        currentWeather: `${current["weather_descriptions"][0]} weather is expected to persist till evening. It is currently ${current.temperature} degrees out, but feels like ${current.feelslike} degrees out. The humidity is ${current.humidity}%.`,
         location: `${location.name}, ${location.region}, ${location.country}`,
       });
     }
